@@ -1,13 +1,18 @@
 # Write your code here.
 katz_deli = []
  
-def take_a_number(katz_deli, name) 
-  katz_deli.push(name)
+# def take_a_number(katz_deli, name) 
+#   katz_deli.push(name)
   
-  puts "Welcome, #{name}. You are number #{katz_deli.count} in line."
+#   puts "Welcome, #{name}. You are number #{katz_deli.count} in line."
 
-end 
-
+# end 
+counter = 0 
+def take_a_number(katz_deli)
+counter +1 
+ katz_deli.push(counter) 
+ puts "Welcome, You are number #{counter} in line."
+end
   def line(katz_deli)
   if katz_deli == []
     puts "The line is currently empty." 
@@ -18,16 +23,16 @@ end
       somebody_line<< " #{index}. #{person}"
       index += 1
     end
-    puts somebody_line
+    puts somebody_line 
   end 
 end
+
 
 def now_serving(katz_deli)
    
     if katz_deli == []
       puts "There is nobody waiting to be served!" 
      else
-       katz_deli.shift
-puts "Currently serving Logan."
+puts "Currently serving //#{katz_deli.shift}."
   end
 end
